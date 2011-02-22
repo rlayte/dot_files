@@ -3,7 +3,7 @@
 	email = rich.layte@gmail.com
 [core]
 	editor = vi -w
-	excludesfile = /Users/richardlayte/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
     st = status
     b = branch

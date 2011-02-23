@@ -67,3 +67,9 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" ------------------------------------------------------------------------------
+" NERDTree Settings
+" ------------------------------------------------------------------------------
+" Hide python cache files (.pyc) in NERDTree
+let NERDTreeIgnore=['\.pyc']

@@ -7,8 +7,6 @@ if [ -f /usr/local/Cellar/bash-completion/1.2/etc/bash_completion ]; then
     . /usr/local/Cellar/bash-completion/1.2/etc/bash_completion
 fi
 
-
-
 ### PATHS ###
 
 PATH=$PATH:/usr/lib/ruby/gems/1.8/bin/
@@ -39,3 +37,9 @@ alias restart="sudo apachectl restart"
 # JsTestDriver
 alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"
 alias jstestserver="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --port "
+
+# Django
+
+if [ -f bash/completion/django_bash_completion ]; then
+    . bash/completion/django_bash_completion
+fi

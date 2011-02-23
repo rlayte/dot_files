@@ -1,6 +1,7 @@
 require "rake"
 
 HOME = Etc.getpwuid.dir
+CURRENT = File.dirname(__FILE__)
 
 task :directories do
     puts '--- BUILDING PROJECT DIRECTORIES ---'
@@ -19,7 +20,7 @@ task :install do
 
     Dir['**'].each do |file|
         unless file == '..' or file == '.' or file =~ /swp/ or file =~ /rake/
-            sh "cp #{file} #{HOME}/.#{file}"
+            sh "ln -s #{CURRENT}/#{file} #{HOME}/.#{file}"
         end
     end
 end

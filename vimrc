@@ -71,5 +71,11 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " ------------------------------------------------------------------------------
 " NERDTree Settings
 " ------------------------------------------------------------------------------
-" Hide python cache files (.pyc) in NERDTree
-let NERDTreeIgnore=['\.pyc']
+" Hide files in NERDTree
+let NERDTreeIgnore=['\.pyc', '.*.swp']
+
+" ------------------------------------------------------------------------------
+" HTML mappings
+" ------------------------------------------------------------------------------
+
+imap ,/ </<C-X><C-O>

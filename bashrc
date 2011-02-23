@@ -3,6 +3,11 @@
 export PS1="\W $ "
 export EDITOR="mvim"
 
+if [ -f /usr/local/Cellar/bash-completion/1.2/etc/bash_completion ]; then
+    . /usr/local/Cellar/bash-completion/1.2/etc/bash_completion
+fi
+
+
 
 ### PATHS ###
 

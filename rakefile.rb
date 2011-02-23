@@ -18,9 +18,35 @@ end
 task :install do
     puts '--- COPYING FILES TO HOME DIRECTORY ---'
 
+    overwrite_all = false
+
     Dir['**'].each do |file|
         unless file == '..' or file == '.' or file =~ /swp/ or file =~ /rake/
-            sh "ln -s #{CURRENT}/#{file} #{HOME}/.#{file}"
+            if overwrite_all
+                replace_file(file)
+            elsif File.exists? "#{HOME}/.#{file}"
+                puts "overwrite #{HOME}/.#{file}?"
+                print "[a,y,n,q] "
+
+                case $stdin.gets.chomp
+                when 'a'
+                    overwrite_all = true
+                    replace_file(file)
+                when 'y'
+                    replace_file(file)
+                when 'n'
+                    puts "skipping #{file}"
+                when 'q'
+                    exit
+                end
+            else
+                sh "ln -s #{CURRENT}/#{file} #{HOME}/.#{file}"
+            end
         end
     end
+end
+
+def replace_file(file)
+    sh "rm -rf #{HOME}/.#{file}"
+    sh "ln -s #{CURRENT}/#{file} #{HOME}/.#{file}"
 end

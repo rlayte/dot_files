@@ -41,5 +41,8 @@ alias jstestserver="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --po
 # Django
 
 if [ -f bash/completion/django_bash_completion ]; then
-    . bash/completion/django_bash_completion
+    source bash/completion/django_bash_completion
 fi
+
+source ~/.bash/completion/django_bash_completion
+source ~/.bash/completion/svn_completion

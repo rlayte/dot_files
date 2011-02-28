@@ -24,6 +24,7 @@ alias ...="cd ../../"
 function mkdir! {
     mkdir $1; cd $1
 }
+alias reload=". ~/.bashrc"
 
 # bash
 alias reload=". ~/.bashrc"

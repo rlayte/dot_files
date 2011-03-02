@@ -1,2 +1,4 @@
 PATH=$PATH:/usr/lib/ruby/gems/1.8/bin/
 export PATH
+
+export CDPATH=$CDPATH:~/work/projects/:~/work/experiments/python/:~/work/experiments/python/:~/work/experiments/python/:~/work/experiments/ruby/:~/work/experiments/javascript/:~/work/experiments/scheme/:~/work/experiments/io/:

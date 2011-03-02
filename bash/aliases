@@ -6,18 +6,40 @@ alias lsa="ls -1FA"
 alias ..="cd ../"
 alias ...="cd ../../"
 
+# mkdir
 function mkdir! {
     mkdir $1; cd $1
 }
 
+function mkpkg {
+    dir= pwd
+    for i in $(echo $1 | tr "/" "\n")
+    do
+      mkdir! $i
+    done
+    cd $dir
+}
+
+function mkpkg! {
+    for i in $(echo $1 | tr "/" "\n")
+    do
+      mkdir! $i
+    done
+}
+
 # bash
 alias reload=". ~/.bashrc"
-alias dotfiles="cd ~/.dot_files/"
 
 # apache
-alias vhosts="mvim /private/etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="mvim /private/etc/hosts"
+alias vhosts="sudo vi /private/etc/apache2/extra/httpd-vhosts.conf"
+alias hosts="sudo vi /private/etc/hosts"
 alias restart="sudo apachectl restart"
+
+function newhost {
+    sudo echo $1 >> /private/etc/hosts
+    sudo echo "<VirtualHost *:80>DocumentRoot $2 ServerName $1</VirtualHost>" >> /private/etc/apache2/extra/httpd-vhosts.conf
+    restart
+}
 
 # JsTestDriver
 alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"

@@ -5,5 +5,8 @@ source ~/.bash/paths
 # Load completions
 
 source ~/.bash/completion/bash-completion
-source ~/.bash/completion/django_bash_completion
-source ~/.bash/completion/svn_completion
+
+for f in ~/.bash/completion/* 
+do
+    source $f
+done

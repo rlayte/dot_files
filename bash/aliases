@@ -1,0 +1,27 @@
+#ls
+alias ls="ls -1F"
+alias lsa="ls -1FA"
+
+# cd
+alias ..="cd ../"
+alias ...="cd ../../"
+
+function mkdir! {
+    mkdir $1; cd $1
+}
+
+# bash
+alias reload=". ~/.bashrc"
+alias dotfiles="cd ~/.dot_files/"
+
+# apache
+alias vhosts="mvim /private/etc/apache2/extra/httpd-vhosts.conf"
+alias hosts="mvim /private/etc/hosts"
+alias restart="sudo apachectl restart"
+
+# JsTestDriver
+alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"
+
+function jstestserver {
+    java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --port $1
+}

@@ -47,3 +47,6 @@ fi
 
 source ~/.bash/completion/django_bash_completion
 source ~/.bash/completion/svn_completion
+
+# Python
+export PYTHONSTARTUP="/Users/richardlayte/.pythonrc"

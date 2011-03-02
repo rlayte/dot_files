@@ -31,13 +31,17 @@ function mkpkg! {
 alias reload=". ~/.bashrc"
 
 # apache
-alias vhosts="sudo vi /private/etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="sudo vi /private/etc/hosts"
 alias restart="sudo apachectl restart"
 
 function newhost {
-    sudo echo $1 >> /private/etc/hosts
-    sudo echo "<VirtualHost *:80>DocumentRoot $2 ServerName $1</VirtualHost>" >> /private/etc/apache2/extra/httpd-vhosts.conf
+    echo 127.0.0.1 $1 | sudo tee -a /private/etc/hosts
+    NEW_HOST="
+    <VirtualHost *:80>
+        DocumentRoot $2
+        ServerName $1
+    </VirtualHost>
+    "
+    echo $NEW_HOST | sudo tee -a /private/etc/apache2/extra/httpd-vhosts.conf
     restart
 }
 

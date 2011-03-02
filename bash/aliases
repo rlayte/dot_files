@@ -45,6 +45,16 @@ function newhost {
     restart
 }
 
+# virtualenv
+
+function activate {
+    . ~/.env/$1/bin/activate
+}
+
+function newenv {
+    virtualenv --no-site-packages ~/.env/$1
+}
+
 # JsTestDriver
 alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"
 

@@ -6,19 +6,55 @@ alias lsa="ls -1FA"
 alias ..="cd ../"
 alias ...="cd ../../"
 
+# mkdir
 function mkdir! {
     mkdir $1; cd $1
+}
+
+function mkpkg {
+    dir= pwd
+    for i in $(echo $1 | tr "/" "\n")
+    do
+      mkdir! $i
+    done
+    cd $dir
+}
+
+function mkpkg! {
+    for i in $(echo $1 | tr "/" "\n")
+    do
+      mkdir! $i
+    done
 }
 
 # bash
 alias reload=". ~/.bashrc"
 
 # apache
-alias vhosts="mvim /private/etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="mvim /private/etc/hosts"
 alias restart="sudo apachectl restart"
 
-# JsTestDriver
+function newhost {
+    echo 127.0.0.1 $1 | sudo tee -a /private/etc/hosts
+    NEW_HOST="
+    <VirtualHost *:80>
+        DocumentRoot $2
+        ServerName $1
+    </VirtualHost>
+    "
+    echo $NEW_HOST | sudo tee -a /private/etc/apache2/extra/httpd-vhosts.conf
+    restart
+}
+
+# virtualenv
+function activate {
+    . ~/.env/$1/bin/activate
+}
+
+function newenv {
+    virtualenv --no-site-packages ~/.env/$1
+}
+
+# jstestdriver
 alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"
 
 function jstestserver {

@@ -4,4 +4,6 @@ export PATH
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+export PROJECT_HOME=$HOME/work/experiments/python
+
 export CDPATH=$CDPATH:~/work/projects/:~/work/experiments/python/:~/work/experiments/python/:~/work/experiments/python/:~/work/experiments/ruby/:~/work/experiments/javascript/:~/work/experiments/scheme/:~/work/experiments/io/:

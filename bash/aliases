@@ -55,8 +55,8 @@ function newenv {
 }
 
 # jstestdriver
-alias jstest="java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --tests all --reset"
+alias jstest="java -jar /usr/bin/jstestdriver.jar --tests all --reset"
 
 function jstestserver {
-    java -jar ~/Library/JsTestDriver/JsTestDriver-1.2.2.jar --port $1
+    java -jar /usr/bin/jstestdriver.jar --port $1
 }

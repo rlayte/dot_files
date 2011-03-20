@@ -1,4 +1,10 @@
 PATH=$PATH:/usr/lib/ruby/gems/1.8/bin/
 export PATH
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/work/experiments/python
+source /usr/local/bin/virtualenvwrapper.sh
+
 export CDPATH=$CDPATH:~/work/projects/:~/work/experiments/
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

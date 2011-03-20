@@ -6,6 +6,11 @@ alias lsa="ls -1FA"
 alias ..="cd ../"
 alias ...="cd ../../"
 
+# rm
+function rmdir {
+    rm -rf $1
+}
+
 # mkdir
 function mkdir! {
     mkdir $1; cd $1
@@ -43,15 +48,6 @@ function newhost {
     "
     echo $NEW_HOST | sudo tee -a /private/etc/apache2/extra/httpd-vhosts.conf
     restart
-}
-
-# virtualenv
-function activate {
-    . ~/.env/$1/bin/activate
-}
-
-function newenv {
-    virtualenv --no-site-packages ~/.env/$1
 }
 
 # jstestdriver

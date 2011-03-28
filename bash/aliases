@@ -1,7 +1,3 @@
-#ls
-alias ls="ls -1F"
-alias lsa="ls -1FA"
-
 # cd
 alias ..="cd ../"
 alias ...="cd ../../"

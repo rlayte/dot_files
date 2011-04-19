@@ -18,7 +18,6 @@ set vb
 syntax enable
 set background=dark
 set t_Co=256
-let g:solarized_termcolors=256
 colorscheme solarized
 
 set ts=4 sts=4 sw=4 expandtab
@@ -89,3 +88,6 @@ autocmd VimEnter * NERDTree
 " close autocomplete scratch buffer
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" Toggle gundo graph
+nnoremap <F5> :GundoToggle<CR>

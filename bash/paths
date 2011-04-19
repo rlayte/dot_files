@@ -1,8 +1,9 @@
 PATH=$PATH:/usr/lib/ruby/gems/1.8/bin/
 export PATH
 
+export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache  
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/work/experiments/python
+export PROJECT_HOME=$HOME/projects/python
 source /usr/local/bin/virtualenvwrapper.sh
 
 export CDPATH=$CDPATH:~/work/projects/:~/work/experiments/

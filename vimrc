@@ -18,7 +18,7 @@ set wildmenu
 set number
 set hidden
 set vb
-colorscheme railscasts
+colorscheme wombat256
 
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
@@ -80,3 +80,5 @@ let NERDTreeIgnore=['\.pyc', '.*.swp']
 " ------------------------------------------------------------------------------
 
 imap ,/ </<C-X><C-O>
+
+autocmd VimEnter * NERDTree

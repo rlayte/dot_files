@@ -1,10 +1,6 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" sparkup
-let g:sparkupExecuteMapping='<c-e>'
-let g:sparkupNextMapping='<c-n>'
-
 " Forget being compatible with good ol' vi
 set nocompatible
 
@@ -15,10 +11,15 @@ filetype indent on
 
 set showmode
 set wildmenu
-set number
 set hidden
 set vb
-colorscheme wombat256
+
+" Solarized colorscheme
+syntax enable
+set background=dark
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
@@ -40,6 +41,12 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
+" Curly brace fixes
+:map [[ ?{<CR>w99[{
+:map ][ /}<CR>b99]}
+:map ]] j0[[%/{<CR>
+:map [] k$][%?}<CR>
+
 " Edit/reload vimrc
 nmap <silent> ,ev :e $MYVIMRC<cr>
 nmap <silent> ,sv :so $MYVIMRC<cr>
@@ -60,10 +67,6 @@ endfunction
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
-" Save mappings
-nmap <silent> ,w :w<cr>
-nmap <silent> ,q :q<cr>
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -82,3 +85,7 @@ let NERDTreeIgnore=['\.pyc', '.*.swp']
 imap ,/ </<C-X><C-O>
 
 autocmd VimEnter * NERDTree
+
+" close autocomplete scratch buffer
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif 
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif

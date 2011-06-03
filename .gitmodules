@@ -22,3 +22,9 @@
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = https://github.com/mattn/gist-vim.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git

@@ -46,13 +46,20 @@ vmap <D-]> >gv
 :map ]] j0[[%/{<CR>
 :map [] k$][%?}<CR>
 
+" Backspace fix
+set backspace=indent,eol,start
+
 " Edit/reload vimrc
-nmap <silent> ,ev :e $MYVIMRC<cr>
-nmap <silent> ,sv :so $MYVIMRC<cr>
+nmap <leader> e :e $MYVIMRC<cr>
+
+" mode switching
+imap jj <Esc>
+nmap <Space> i
 
 " Toggle buffer
-nmap <silent> ,b :b#<cr>
+vmap <leader> b :b#<cr>
 
+" SuperTab stuff
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
@@ -71,16 +78,10 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-" ------------------------------------------------------------------------------
-" NERDTree Settings
-" ------------------------------------------------------------------------------
 " Hide files in NERDTree
 let NERDTreeIgnore=['\.pyc', '.*.swp']
 
-" ------------------------------------------------------------------------------
 " HTML mappings
-" ------------------------------------------------------------------------------
-
 imap ,/ </<C-X><C-O>
 
 autocmd VimEnter * NERDTree
@@ -91,3 +92,5 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Toggle gundo graph
 nnoremap <F5> :GundoToggle<CR>
+
+command! RunPythonShell :!ipython % <CR>

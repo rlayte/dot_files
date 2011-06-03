@@ -7,21 +7,18 @@ function mkdir! {
     mkdir $1; cd $1
 }
 
-function mkpkg {
-    dir= pwd
-    for i in $(echo $1 | tr "/" "\n")
-    do
-      mkdir! $i
-    done
-    cd $dir
-}
-
-function mkpkg! {
-    for i in $(echo $1 | tr "/" "\n")
-    do
-      mkdir! $i
-    done
-}
-
 # bash
 alias reload=". ~/.bashrc"
+
+
+# django
+
+function djrs {
+    PORT=8000
+
+    if [ $1 ]; then
+        PORT=$1
+    fi
+        
+    django-admin.py runserver 0.0.0.0:$PORT
+}

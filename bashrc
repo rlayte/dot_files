@@ -105,5 +105,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export WORKON_HOME=/home/richardlayte/.virtualenvs/
+. $HOME/.bash_completion/django_completion
+
+export WORKON_HOME=$HOME/.virtualenvs/
 source /usr/local/bin/virtualenvwrapper.sh

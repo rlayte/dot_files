@@ -13,7 +13,7 @@ alias reload=". ~/.bashrc"
 
 # django
 
-function djrs {
+function djs {
     PORT=8000
 
     if [ $1 ]; then
@@ -22,3 +22,5 @@ function djrs {
         
     django-admin.py runserver 0.0.0.0:$PORT
 }
+
+alias gae='/home/richardlayte/google_appengine/dev_appserver.py'

@@ -94,3 +94,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 nnoremap <F5> :GundoToggle<CR>
 
 command! RunPythonShell :!ipython % <CR>
+
+" Settings for VimClojure
+let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
+let g:clj_paren_rainbow=1           " Rainbow parentheses'!

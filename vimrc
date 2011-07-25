@@ -21,6 +21,10 @@ set t_Co=256
 colorscheme solarized
 
 set ts=4 sts=4 sw=4 expandtab
+
+" use two space tabs for ruby                                                                                                                                        
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 et
+
 set autoindent
 set smartindent
 
@@ -50,14 +54,14 @@ vmap <D-]> >gv
 set backspace=indent,eol,start
 
 " Edit/reload vimrc
-nmap <leader> e :e $MYVIMRC<cr>
+nmap <leader>e :e $MYVIMRC<cr>
 
 " mode switching
 imap jj <Esc>
 nmap <Space> i
 
 " Toggle buffer
-vmap <leader> b :b#<cr>
+vmap <leader>b :b#<cr>
 
 " SuperTab stuff
 function! Tab_Or_Complete()
@@ -95,6 +99,4 @@ nnoremap <F5> :GundoToggle<CR>
 
 command! RunPythonShell :!ipython % <CR>
 
-" Settings for VimClojure
-let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
-let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+au BufRead,BufNewFile *.clj set filetype=clojure

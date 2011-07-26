@@ -31,3 +31,9 @@
 [submodule "vim/bundle/coffee-script"]
 	path = vim/bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/screen"]
+	path = vim/bundle/screen
+	url = https://github.com/ervandew/screen.git
+[submodule "vim/bundle/slime"]
+	path = vim/bundle/slime
+	url = https://github.com/jpalardy/vim-slime.git

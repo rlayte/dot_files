@@ -34,3 +34,9 @@
 [submodule "vim/bundle/clojure"]
 	path = vim/bundle/clojure
 	url = https://github.com/simonhicks/VimClojure.git
+[submodule "vim/bundle/screen"]
+	path = vim/bundle/screen
+	url = https://github.com/ervandew/screen.git
+[submodule "vim/bundle/slime"]
+	path = vim/bundle/slime
+	url = https://github.com/jpalardy/vim-slime.git

@@ -54,15 +54,12 @@ vmap <D-]> >gv
 " Backspace fix
 set backspace=indent,eol,start
 
-" Edit/reload vimrc
-nmap <leader>e :e $MYVIMRC<cr>
-
 " mode switching
 imap jj <Esc>
 nmap <Space> i
 
 " Toggle buffer
-vmap <leader>b :b#<cr>
+nmap <leader>b :b#<cr>
 
 " SuperTab stuff
 function! Tab_Or_Complete()

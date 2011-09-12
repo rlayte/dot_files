@@ -1,0 +1,19 @@
+[user]
+    name = Rich Layte
+    email = rich.layte@gmail.com
+
+[alias]
+    ci = commit -am
+    co = checkout
+    st = status
+    praise = blame
+
+[apply]
+    whitespace = strip
+
+[diff]
+    color = auto
+    rename = copy
+
+[status]
+    color = auto

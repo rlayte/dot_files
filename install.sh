@@ -9,3 +9,6 @@ do
     NAME=$(basename $FILE)
     sudo ln -sf ${FILE} /etc/bash_completion.d/${NAME}
 done
+
+git submodule init
+git submodule update

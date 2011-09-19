@@ -13,4 +13,13 @@ done
 git submodule init
 git submodule update
 
+
+# Remove this - should be in puppet manifest but too lazy
+ssh-keygen
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+sudo pip install virtualenv virtualenvwrapper
+sudo npm install -g coffee-script less
+
 . $HOME/.profile

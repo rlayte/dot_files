@@ -3,6 +3,8 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/vim $HOME/.vim
 ln -sf $PWD/gitignore $HOME/.gitignore
 ln -sf $PWD/gitconfig $HOME/.gitconfig
+ln -sf $PWD/ssh/id_rsa $HOME/.ssh/id_rsa
+ln -sf $PWD/ssh/id_rsa.pub $HOME/.ssh/id_rsa.pub
 
 for FILE in $PWD/bash_completion/*
 do
@@ -13,13 +15,6 @@ done
 git submodule init
 git submodule update
 
-
-# Remove this - should be in puppet manifest but too lazy
-ssh-keygen
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
-sudo pip install virtualenv virtualenvwrapper
-sudo npm install -g coffee-script less
+sudo pip install virtualenv virtualenvwrapper ipython
 
 . $HOME/.profile

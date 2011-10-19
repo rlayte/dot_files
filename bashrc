@@ -110,3 +110,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias ..="cd ../"
 alias ...="cd ../../"
+
+alias tmux="TERM=screen-256color-bce tmux"

@@ -1,4 +1,5 @@
 ln -sf $PWD/bashrc $HOME/.bashrc
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/vim $HOME/.vim
 ln -sf $PWD/gitignore $HOME/.gitignore

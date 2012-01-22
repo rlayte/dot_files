@@ -61,8 +61,14 @@ nmap <Space> i
 nnoremap : ;
 nnoremap ; :
 
+
 " Toggle buffer
 nmap <leader>b :b#<cr>
+
+map <C-H> <C-W>h<C-W>
+map <C-J> <C-W>j<C-W>
+map <C-K> <C-W>k<C-W>
+map <C-L> <C-W>l<C-W>
 
 " SuperTab stuff
 function! Tab_Or_Complete()

@@ -58,6 +58,9 @@ set backspace=indent,eol,start
 imap jj <Esc>
 nmap <Space> i
 
+nnoremap : ;
+nnoremap ; :
+
 " Toggle buffer
 nmap <leader>b :b#<cr>
 

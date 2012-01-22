@@ -105,8 +105,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export WORKON_HOME=/projects/.virtualenvs
+export WORKON_HOME=/home/richardlayte/projects/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color-bce tmux"
 
 alias ..="cd ../"
 alias ...="cd ../../"

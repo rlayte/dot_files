@@ -108,8 +108,7 @@ fi
 export WORKON_HOME=/home/richardlayte/projects/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmux="TERM=screen-256color-bce tmux"
-
 alias ..="cd ../"
 alias ...="cd ../../"
+
+alias tmux="TERM=screen-256color-bce tmux"

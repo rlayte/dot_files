@@ -105,10 +105,22 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+<<<<<<< HEAD
 export WORKON_HOME=/home/richardlayte/projects/.virtualenvs
+=======
+export PATH=$PATH:/opt/google_appengine/
+export WORKON_HOME=/home/rich/projects/.virtualenvs
+>>>>>>> 4d1f14d2734d6cf3ebe745d8bf4c7513c688c110
 source /usr/local/bin/virtualenvwrapper.sh
 
 alias ..="cd ../"
 alias ...="cd ../../"
 
+<<<<<<< HEAD
 alias tmux="TERM=screen-256color-bce tmux"
+=======
+alias tmux="TERM=xterm-256color tmux -u"
+
+# load tmuxinator if installed
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && . $HOME/.tmuxinator/scripts/tmuxinator
+>>>>>>> 4d1f14d2734d6cf3ebe745d8bf4c7513c688c110

@@ -58,6 +58,15 @@ set backspace=indent,eol,start
 imap jj <Esc>
 nmap <Space> i
 
+nnoremap ; :
+nnoremap : ;
+
+" window switching with standard keys
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-H> <C-W>h<C-W>_
+map <C-L> <C-W>l<C-W>_
+
 " Toggle buffer
 nmap <leader>b :b#<cr>
 
@@ -98,3 +107,5 @@ nnoremap <F5> :GundoToggle<CR>
 command! RunPythonShell :!ipython % <CR>
 
 au BufRead,BufNewFile *.clj set filetype=clojure
+
+:set timeout timeoutlen=10000 ttimeoutlen=250

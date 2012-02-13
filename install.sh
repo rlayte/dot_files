@@ -3,8 +3,7 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/vim $HOME/.vim
 ln -sf $PWD/gitignore $HOME/.gitignore
 ln -sf $PWD/gitconfig $HOME/.gitconfig
-ln -sf $PWD/ssh/id_rsa $HOME/.ssh/id_rsa
-ln -sf $PWD/ssh/id_rsa.pub $HOME/.ssh/id_rsa.pub
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 
 for FILE in $PWD/bash_completion/*
 do

@@ -17,3 +17,5 @@
 
 [status]
     color = auto
+[core]
+	excludesfile = /home/rich/.gitignore

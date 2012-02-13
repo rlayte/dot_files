@@ -29,6 +29,8 @@ autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 et
 set autoindent
 set smartindent
 
+map ; :
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
   
@@ -57,9 +59,6 @@ set backspace=indent,eol,start
 " mode switching
 imap jj <Esc>
 nmap <Space> i
-
-nnoremap ; :
-nnoremap : ;
 
 " Toggle buffer
 nmap <leader>b :b#<cr>
@@ -94,6 +93,9 @@ let NERDTreeIgnore=['\.pyc', '.*.swp']
 
 " HTML mappings
 imap ,/ </<C-X><C-O>
+
+" Less syntax
+au BufNewFile,BufRead *.less set filetype=less
 
 autocmd VimEnter * NERDTree
 

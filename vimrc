@@ -21,7 +21,15 @@ set background=dark
 set t_Co=256
 colorscheme solarized
 
-set ts=4 sts=4 sw=4 expandtab
+set ts=2 sts=2 sw=2 expandtab
+
+set lines
+set rnu
+
+set guioptions-=r
+set guioptions-=R
+set guioptions-=T
+set guioptions-=L
 
 " use two space tabs for ruby                                                                                                                                        
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 et
@@ -33,6 +41,8 @@ map ; :
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
+
+nmap <leader>s :b#<CR>
   
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
@@ -90,6 +100,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Hide files in NERDTree
 let NERDTreeIgnore=['\.pyc', '.*.swp']
+let NERDTreeShowLineNumbers=1
 
 " HTML mappings
 imap ,/ </<C-X><C-O>

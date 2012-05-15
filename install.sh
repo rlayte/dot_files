@@ -17,4 +17,4 @@ git submodule update
 
 sudo pip install virtualenv virtualenvwrapper ipython
 
-. $HOME/.profile
+. $HOME/.bashrc

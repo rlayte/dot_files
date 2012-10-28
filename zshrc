@@ -65,9 +65,6 @@ alias jasmine=phantom-jasmine
 export EDITOR='vim'
 export YAMMER_DIR='/Users/rlayte/projects/yammer/'
 export WORKFEED_DIR='/Users/rlayte/projects/yammer/workfeed/'
-export WORKON_HOME='~/.virtualenvs'
-
-source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH="$PATH:/var/lib/gems/1.8/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"

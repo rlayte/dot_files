@@ -65,9 +65,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Coloured prompt
-export PS1="\e[0;32m\u\e[0;34m@\e[m\e[0;32m\h\e[m:\e[0;34m\w \e[m\$ "
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -80,39 +77,37 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+for f in /opt/local/etc/bash_completion/*; do
+  . $f
+done
 
-export PATH=$PATH:/opt/google_appengine/
-export WORKON_HOME=/home/rich/projects/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
 
-alias ..="cd ../"
-alias ...="cd ../../"
+function parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
-alias tmux="TERM=screen-256color-bce tmux"
+# Coloured prompt
+PS1="\e[0;32m\u\e[0;34m@\e[m\e[0;32m\h\e[m \e[0;34m\w\e[0;35m\$(parse_git_branch)\n\e[1;37m\$ \e[m"
+
+TERM=xterm-256color
 
 # load tmuxinator if installed
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && . $HOME/.tmuxinator/scripts/tmuxinator
+alias tmux="TERM=screen-256color-bce tmux"
+
+alias jasmine=phantom-jasmine
+
+export EDITOR='vim'
+export YAMMER_DIR='/Users/rlayte/projects/yammer/'
+export WORKON_HOME='~/.virtualenvs'
+source /usr/local/bin/virtualenvwrapper.sh

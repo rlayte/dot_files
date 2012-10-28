@@ -52,3 +52,6 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = https://github.com/skwp/vim-rspec.git

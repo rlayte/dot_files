@@ -3,10 +3,13 @@
     email = rich.layte@gmail.com
 
 [alias]
-    ci = commit -am
+    ci = commit -m
     co = checkout
     st = status
     praise = blame
+    l = "!source ~/.githelpers && pretty_git_log"
+    r = !git l -20
+    aa = add --all
 
 [apply]
     whitespace = strip
@@ -17,5 +20,6 @@
 
 [status]
     color = auto
+
 [core]
-	excludesfile = /home/rich/.gitignore
+	excludesfile = /Users/rlayte/.gitignore

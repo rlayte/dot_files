@@ -1,7 +1,6 @@
 # Editor files #
 ################
-*.swp
-*.swo
+*.sw*
 
 # Packages #
 ############
@@ -32,3 +31,5 @@ Thumbs.db
 # Python files #
 #################
 *.pyc
+
+node_modules

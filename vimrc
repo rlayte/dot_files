@@ -389,3 +389,4 @@ imap <C-k> <up>
 nmap <leader>b :b#<CR>
 map <leader>s :sh<CR>
 set shell=zsh
+set nofoldenable

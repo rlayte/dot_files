@@ -70,3 +70,4 @@ export PATH="$PATH:/var/lib/gems/1.8/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/1.9.2-p290/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+source /usr/local/bin/virtualenvwrapper.sh

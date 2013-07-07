@@ -390,3 +390,7 @@ nmap <leader>b :b#<CR>
 map <leader>s :sh<CR>
 set shell=zsh
 set nofoldenable
+set nonumber
+
+" Auto fix vim python paths if virtualenv enabled
+let g:pymode_virtualenv = 1

@@ -63,12 +63,16 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias jasmine=phantom-jasmine
 
 export EDITOR='vim'
-export YAMMER_DIR='/Users/rlayte/projects/yammer/'
-export WORKFEED_DIR='/Users/rlayte/projects/yammer/workfeed/'
+export GOPATH="$HOME/work/go"
 
 export PATH="$PATH:/var/lib/gems/1.8/bin"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/1.9.2-p290/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 source /usr/local/bin/virtualenvwrapper.sh
 eval "$(rbenv init -)"
+
+export NVM_DIR="/Users/Rich-Layte/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

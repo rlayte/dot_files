@@ -60,19 +60,14 @@ ${smiley} %{$reset_color%}'
 alias ls="ls -G1"
 alias ll="ls -l"
 alias tmux="TERM=screen-256color-bce tmux"
-alias jasmine=phantom-jasmine
+alias vi="mvim -v"
+alias vim="mvim -v"
 
 export EDITOR='vim'
-export GOPATH="$HOME/work/go"
 
 export PATH="$PATH:/var/lib/gems/1.8/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/1.9.2-p290/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-source /usr/local/bin/virtualenvwrapper.sh
-eval "$(rbenv init -)"
 
-export NVM_DIR="/Users/Rich-Layte/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export GOPATH="$HOME/work/go"
